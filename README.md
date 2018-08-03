@@ -1,2 +1,2 @@
 # Metronome
-Metronome desktop application JavaFX, CSS3
+Metronome desktop application JavaFX, CSS3, MIDI
