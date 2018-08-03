@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metronomePackage.Controller">
+   <children>
+      <Pane id="mainPane" fx:id="mainPane" layoutX="162.0" layoutY="77.0" prefHeight="485.0" prefWidth="616.0" styleClass="pane" stylesheets="@project.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="616.0" spacing="20.0">
+               <children>
+                  <ComboBox id="baseNoteBox" fx:id="baseNoteBox" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="31.0" prefWidth="50.0" scaleShape="false" styleClass="combo-box" stylesheets="@project.css" />
+                  <Text fill="#384d61" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="BPM:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Malgun Gothic" size="22.0" />
+                     </font>
+                  </Text>
+                  <Spinner id="bpmSpinner" fx:id="bpmSpinner" cache="true" cacheShape="false" centerShape="false" editable="true" focusTraversable="false" prefHeight="34.0" prefWidth="64.0" scaleShape="false" stylesheets="@project.css">
+                     <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory max="400" min="20" />
+                     </valueFactory>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Spinner>
+                  <Button id="clickTempoBtn" fx:id="clickTempoBtn" mnemonicParsing="false" onAction="#clickTempoAction" prefHeight="34.0" prefWidth="45.0" stylesheets="@project.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <VBox prefHeight="45.0" prefWidth="100.0">
+                     <children>
+                        <Text fill="#384d61" strokeType="OUTSIDE" strokeWidth="0.0" text="Time signature:">
+                           <font>
+                              <Font name="Malgun Gothic" size="19.0" />
+                           </font>
+                        </Text>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox id="numberOfBeatsComboBox" fx:id="numberOfBeatsComboBox" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="25.0" prefWidth="55.0" scaleShape="false" styleClass="combo-box" stylesheets="@project.css" visibleRowCount="6" />
+                              <Text fill="#384d61" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                                 <font>
+                                    <Font name="Yu Gothic Medium" size="30.0" />
+                                 </font>
+                              </Text>
+                              <ComboBox id="typeOfBeatComboBox" fx:id="typeOfBeatComboBox" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="25.0" prefWidth="55.0" scaleShape="false" styleClass="combo-box" stylesheets="@project.css" visibleRowCount="6" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label id="expressionLbl" fx:id="expressionLbl" prefHeight="22.0" prefWidth="111.0" text="expression" textAlignment="CENTER" textFill="#384d61">
+                     <font>
+                        <Font name="Malgun Gothic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="50.0" right="40.0" top="30.0" />
+               </padding>
+            </HBox>
+            <HBox id="viewNotesHbox" fx:id="viewNotesHbox" alignment="CENTER" layoutY="105.0" prefHeight="135.0" prefWidth="616.0" spacing="20.0">
+               <padding>
+                  <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutY="243.0" prefHeight="75.0" prefWidth="616.0" spacing="30.0">
+               <padding>
+                  <Insets bottom="30.0" left="50.0" right="40.0" top="30.0" />
+               </padding>
+               <children>
+                  <Text fill="#384d61" strokeType="OUTSIDE" strokeWidth="0.0" text="Sound:">
+                     <font>
+                        <Font name="Malgun Gothic" size="20.0" />
+                     </font>
+                  </Text>
+                  <ComboBox id="soundComboBox" fx:id="soundComboBox" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="25.0" prefWidth="111.0" scaleShape="false" styleClass="combo-box" stylesheets="@project.css" />
+                  <VBox prefHeight="34.0" prefWidth="133.0">
+                     <children>
+                        <Text fill="#384d61" strokeType="OUTSIDE" strokeWidth="0.0" text="Pitch:" wrappingWidth="66.6328125">
+                           <font>
+                              <Font name="Malgun Gothic" size="20.0" />
+                           </font>
+                        </Text>
+                        <Slider id="pitchSlider" fx:id="pitchSlider" prefHeight="18.0" prefWidth="110.0" stylesheets="@project.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Slider>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="34.0" prefWidth="133.0">
+                     <children>
+                        <Text fill="#384d61" strokeType="OUTSIDE" strokeWidth="0.0" text="Volume:">
+                           <font>
+                              <Font name="Malgun Gothic" size="20.0" />
+                           </font>
+                        </Text>
+                        <Slider id="volumeSlider" fx:id="volumeSlider" stylesheets="@project.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Slider>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="6.0" layoutY="344.0" prefHeight="50.0" prefWidth="616.0" spacing="50.0">
+               <children>
+                  <Button id="playBtn" fx:id="playBtn" mnemonicParsing="false" onAction="#playAction" prefHeight="45.0" prefWidth="44.0" stylesheets="@project.css" />
+                  <Button id="stopBtn" fx:id="stopBtn" mnemonicParsing="false" onAction="#stopAction" prefHeight="45.0" prefWidth="44.0" stylesheets="@project.css" />
+               </children>
+            </HBox>
+            <HBox layoutY="425.0" prefHeight="50.0" prefWidth="616.0" spacing="50.0">
+               <children>
+                  <Text fill="#384d61" strokeType="OUTSIDE" strokeWidth="0.0" text="Select settings:">
+                     <font>
+                        <Font name="Malgun Gothic" size="14.0" />
+                     </font>
+                  </Text>
+                  <ComboBox id="savedParamatersComboBox" fx:id="savedParamatersComboBox" prefHeight="25.0" prefWidth="160.0" stylesheets="@project.css" />
+                  <Button id="saveBtn" fx:id="saveBtn" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="164.0" stylesheets="@project.css" text="Save parameters" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" right="40.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children></Pane>
+      <Pane id="popupPane" fx:id="popupPane" layoutX="158.0" layoutY="101.0" prefHeight="284.0" prefWidth="300.0" styleClass="pane" stylesheets="@project.css" visible="false">
+         <children>
+            <Text fill="#384d61" layoutX="15.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What should be the name of settings?" textAlignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField id="nameSetsInput" fx:id="nameSetsInput" layoutX="45.0" layoutY="130.0" prefHeight="25.0" prefWidth="210.0" stylesheets="@project.css" />
+            <Button id="savePopupBtn" fx:id="savePopupBtn" layoutX="96.0" layoutY="191.0" mnemonicParsing="false" onAction="#savePopup" prefHeight="25.0" prefWidth="115.0" stylesheets="@project.css" text="Save" />
+         </children>
+      </Pane>
+      <Pane id="overWritePane" fx:id="overWritePane" layoutX="158.0" layoutY="183.0" prefHeight="120.0" prefWidth="300.0" styleClass="pane" stylesheets="@project.css" visible="false">
+         <children>
+            <Text fill="#384d61" layoutX="85.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The name already exists." textAlignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic" size="14.0" />
+               </font>
+            </Text>
+            <Button id="yesBtn" fx:id="yesBtn" layoutX="68.0" layoutY="76.0" mnemonicParsing="false" onAction="#yesAnswer" text="Yes" />
+            <Button id="noBtn" fx:id="noBtn" layoutX="164.0" layoutY="76.0" mnemonicParsing="false" onAction="#noAnswer" text="No" />
+            <Text fill="#384d61" layoutX="25.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you overwrite the saved settings?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

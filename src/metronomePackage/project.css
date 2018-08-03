@@ -1,0 +1,117 @@
+.pane {
+    -fx-background-image: url("images/background.jpg");
+    -fx-background-position: center, center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-attachment: fixed;
+    -fx-background-size: cover;
+}
+
+
+.spinner {
+    -fx-body-color: #E8B394;
+    -fx-control-inner-background: #ECE2C7;
+}
+
+.spinner .text-field{
+    -fx-background-insets: 0;
+    -fx-control-inner-border: 0;
+    -fx-font-family: "Malgun Gothic";
+    -fx-text-fill: #384D61;
+    -fx-display-caret: false;
+}
+
+.spinner:focused{
+    -fx-focus-color: #E8B394;
+    -fx-faint-focus-color: #E8B394;
+    -fx-background-insets: 0;
+    -fx-control-inner-border: 0;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button{
+    -fx-faint-focus-color: #E8B394;
+    -fx-background-insets: 0;
+    -fx-control-inner-border: 0;
+}
+
+.spinner .increment-arrow, .spinner .decrement-arrow{
+    -fx-background-color: #384D61;
+}
+
+
+.combo-box {
+    -fx-background-color: #ECE2C7;
+    -fx-body-color: #ECE2C7;
+    -fx-control-inner-background: #ECE2C7;
+    -fx-background-insets: 0, 0;
+    -fx-font-family: "Malgun Gothic";
+    -fx-text-fill: #384D61;
+    -fx-padding: 2;
+}
+
+.combo-box .list-cell:focused{
+    -fx-background-color: #ECE2C7;
+    -fx-text-fill: #384D61;
+}
+
+.combo-box .list-cell{
+    -fx-font-family: "Malgun Gothic";
+    -fx-text-fill: #384D61;
+    -fx-padding: 2;
+    -fx-alignment: center;
+}
+
+.combo-box .list-cell:hover{
+    -fx-background-color: #E8B394;
+}
+
+.combo-box .arrow{
+    -fx-background-color: #384D61;
+}
+
+.combo-box .scroll-bar{
+    -fx-background-color: #ECE2C7;
+    -fx-border-color: transparent;
+}
+
+.combo-box .scroll-bar .thumb{
+    -fx-background-color: #E8B394;
+    -fx-border-color: transparent;
+}
+
+.slider {
+    -fx-body-color: #384D61;
+    -fx-control-inner-background: #ECE2C7;
+    -fx-background-insets: 0, 0;
+}
+
+.slider:focused{
+    -fx-focus-color: #384D61;
+}
+
+.text-field{
+    -fx-text-fill: #384D61;
+    -fx-background-color: #ECE2C7;
+}
+
+.button {
+    -fx-background-color: #E8B394;
+    -fx-text-fill: #384D61;
+}
+
+
+.button:pressed{
+    -fx-opacity: 0.75;
+}
+
+
+#playBtn {
+    -fx-graphic: url(images/play.png);
+}
+
+#stopBtn {
+    -fx-graphic: url(images/stop.png);
+}
+
+#clickTempoBtn {
+    -fx-graphic: url(images/click.png);
+}
